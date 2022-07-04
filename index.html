@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<hmtl lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    <title>Simulação Financiamento</title>
+    <style>
+      html {
+        background-color: darkblue;
+        color: white;
+        font: 11pt Tahoma;
+      }
+
+      tr:nth-child(even) {        
+        background-color: rgb(150, 190, 220);
+
+      }
+
+      th {
+        background-color: rgb(127, 127, 220);
+      }
+
+      table,
+      th {
+        border: 1px solid white;
+        border-collapse: collapse;
+        padding: 15px;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>
+      Simulação de Financiamento com Sistema de Amortização Constante (SAC)
+    </h1>
+    <input
+      type="text"
+      name=""
+      id="textValordoBem"
+      placeholder="Valor do Bem"
+    /><br />
+    <input
+      type="text"
+      name=""
+      id="textEntrada"
+      placeholder="Valor da Entrada"
+    /><br />
+    <input
+      type="text"
+      name=""
+      id="textTaxadeJuros"
+      placeholder="Taxa de Juros (%)"
+    /><br />
+    <input
+      type="text"
+      name=""
+      id="textPrazo"
+      placeholder="Prazo (em meses)"
+    /><br />
+    <button id="buttonCalcular">Calcular</button>
+    <input type="checkbox" name="" id="carencia" />Com carência?
+    <select name="" id="listaSuspensaCarencia" hidden>
+      <option value="2">2 meses</option>
+      <option value="3">3 meses</option>
+      <option value="4">4 meses</option>
+    </select>
+    <p></p>
+    <table>
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>Valor da Parcela</th>
+          <th>Amortizacao</th>
+          <th>Juros</th>
+          <th>Saldo Devedor</th>
+        </tr>
+      </thead>
+      <tbody id="corpoTabela"></tbody>
+    </table>
+  </body>
+  <script type="module" src="script.js"></script>
+</hmtl>
