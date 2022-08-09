@@ -13,7 +13,7 @@ export class Parcela {
     this.#saldo = saldo;
   }
 
-  getSaldo() {    
+  getSaldo() {
     return this.#saldo;
   }
 
